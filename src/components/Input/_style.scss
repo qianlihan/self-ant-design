@@ -1,0 +1,58 @@
+.qianli-input-wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  .icon-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 35px;
+    justify-content: center;
+    color: $input-color;
+  }
+}
+.icon-wrapper + .qianli-input-inner {
+  padding-right: 35px;
+}
+.qianli-input-inner {
+  width: 100%;
+  padding: $input-padding-y $input-padding-x;
+  font-family: $input-font-family;
+  transition: $input-transition;
+
+  &:focus {
+    color: $input-focus-color;
+    background-color: $input-focus-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+.qianli-input-group-prepend,
+.qianli-input-group-append {
+  display: flex;
+  align-items: center;
+  border: $input-border-width solid $input-group-addon-border-color;
+  border-radius: $input-border-radius;
+}
+.qianli-input-group-append + .btn {
+  padding: 0;
+  border: 0;
+}
+.input-group > .qianli-input-group-prepend,
+.input-group.input-group-append > .qianli-input-inner {
+  @include border-right-radius(0);
+}
+
+.input-group > .qianli-input-group-append,
+.input-group.input-group-prepend > .qianli-input-inner {
+  @include border-left-radius(0);
+}
+
+.input-size-sm .qianli-input-inner {
+  font-size: $input-font-size-sm;
+}
+
+.input-size-lg .qianli-input-inner {
+  font-size: $input-font-size-lg;
+}
